@@ -1,0 +1,23 @@
+  /* var x = /[0-9]{10}$/.test(phoneNumber);
+    if(!x){
+        alert("At least 10 digits");
+    }
+    var y = /[a-z]{2,100}$/.test(hospitalname);
+    if(!y){
+        alert("At least 2 characters");
+    }
+
+    var z = /[a-z]{2,100}$/.test(location);
+    if(!z){
+        alert("At least 2 characters");
+    }
+
+    var strUrl = "controller/controller.php?cmd=13&hospitalname="+hospitalname+"&location="+location+"&phone="+phoneNumber
+        +"&firstname="+firstname+"lastname="+lastname+"&username="+username+"&password="+password1;
+    var objResult = sendRequest(strUrl);
+    if(objResult.result==0) {
+        alert(objResult.message);
+        return;
+    }*/
+    //alert(objResult.message);
+   // window.location.href = 'admin_home.html';
