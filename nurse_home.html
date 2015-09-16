@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Taskboard</title>
+		<link rel="stylesheet" type="text/css" href="css/new.css">
+        <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            getAllNurseTasks();
+        });
+    </script>
+    <script type="text/javascript">
+    </script>
+    </head>
+    
+    <body background="img/backgrounder1.png">
+    <div id="divStatus"></div>
+   
+        <div id="profile-bar">
+            <a href="nurse_home.html"><img id="home-icon" src="img/home1.png"></a>
+            <label id="page-label">Nurse Taskboard</label>
+            <input id="profile-search-input" type="text" placeholder="Search">
+            <img id="logout-icon" src="img/logout.png" onclick="logout()">
+	    </div>
+        
+            <div class="actions">
+                <center>
+                    <br><label id="action-label">My Task</label><br>
+                    <button class="action-button" onclick="getAllNurseSpecTasks('overdue')">Incomplete</button><br>
+                    <button class="action-button" onclick="getAllNurseSpecTasks('ongoing')">In progress</button><br>
+                    <button class="action-button" onclick="getAllNurseSpecTasks('requested completion')">Completion Requested</button><br>
+                    <button class="action-button" onclick="getAllNurseSpecTasks('finished')">Completed</button><br>
+                    <button class="action-button" onclick="allNurseTasks()">All</button><br>
+                    <div id="action-queries">
+                        <br><label id="action-label" style="color:forestgreen;">Actions</label>
+                    </div>
+                </center>
+            </div>
+
+            <div id="nurse-focus">
+
+            </div>
+    </body>
+</html>

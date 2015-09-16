@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Welcome</title>
+		<link rel="stylesheet" type="text/css" href="css/new.css">
+        <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+            <script type="text/javascript">
+        $(document).ready(function() {
+           // load_home();
+        });
+    </script>
+	</head>
+
+	<body>
+        <div id="landing-1"></div>
+        <div id="landing-1-cover">
+            <div id="divStatus"></div>
+        <div id="welcome-header">
+            <center>
+                <label id="welcome">Welcome To</label><br>
+                <label id="main-title">Nurse Task Manager</label>
+            </center>
+        </div>
+            <div id="welcome-container">
+                <center>
+                    <br><label id="welcome-container-label">Select User:</label><br>
+                    <div class="welcome-container-user" onclick="load_login_nurse()">
+                        <br><label class="user-label">Nurse</label><br>
+                        <img class="user-icon" src="img/nurse.png">
+                    </div>
+
+                    <div class="welcome-container-user" onclick="load_login_doctor()">
+                        <br><label class="user-label">Admin</label><br>
+                        <img class="user-icon" src="img/doctor.png">
+                    </div>
+                </center>
+            </div>
+        </div>
+        
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!--author@ Ali PF Njie -->
+<!--@co-author Salifu Mutaru -->
+<html>
+    <head>
+        <title>Home-Admin</title>
+		<link rel="stylesheet" type="text/css" href="css/new.css">
+        <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            //checkAdminSession();
+            getAllAdminTasks();
+        });
+    </script>
+    </head>
+    
+    <body background="img/backgrounder1.png">
+    <div id="divStatus"></div>
+        <div id="profile-bar">
+            <a href="admin_home.html"><img id="home-icon" src="img/home1.png"></a>
+            <label id="page-label">Admin Board</label>
+            <input id="profile-search-input" type="text" placeholder="Search">
+            
+                <img id="logout-icon" src="img/logout.png" onclick="logout()">
+          
+	    </div>
+        
+            <div class="actions">
+                <center>
+                    <label id="action-label">Menu</label><br>
+                    <button class="action-button" onclick="load_add_nurse()">Add Nurse</button><br>
+                    <button class="action-button" onclick="load_add_task()">Assign Task</button><br>
+                    <button class="action-button" onclick="completion()">Completion Requests</button><br>
+                    <button class="action-button" onclick="displayAllNurses('all')">View Nurses</button><br>
+                    <div id="action-queries" style="height:280px;">
+                    <label id="action-label" style="color:forestgreen;">Task</label><br>
+                    <button class="action-button" style="background-color:forestgreen; border: 1px forestgreen; color: white;" onclick="getAllAdminSpecTasks('finished')">Completed</button><br>
+                    <button class="action-button" style="background-color:forestgreen; border: 1px forestgreen; color: white;" onclick="getAllAdminSpecTasks('ongoing')">In progress</button><br>
+                    <button class="action-button" style="background-color:forestgreen; border: 1px forestgreen; color: white;" onclick="getAllAdminSpecTasks('overdue')">Overdue</button>
+                        <button class="action-button" style="background-color:forestgreen; border: 1px forestgreen; color: white;" onclick="getAllAdminTasks()">All</button><br>
+                    </div>
+                </center>
+            </div>
+        
+        <div id="admin-focus">
+            
+        </div>
+    </body>
+</html>
