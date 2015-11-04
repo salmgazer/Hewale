@@ -55,3 +55,4 @@ Models include database mainly, and PHP classes for each table in the database.
 Views were implemented in HTML5, CSS, and JS and JQUERY.
 Controller was implemented in PHP to receive AJAX requests and send JSON results.
 
+Starting salifu-v2 branch
