@@ -1,1 +1,32 @@
+#login {
+    padding: 10px;
+    margin-top: 30%;
+}
 
+#landing-page h3 {
+    font-family: Forte;
+}
+
+#landing-page p {
+    font-family: Candara;
+    font-size: 22px;
+}
+
+.tabs .fa {
+    color: white;
+}
+
+#link {
+    font-family: MV Boli;
+}
+
+#link h4 {
+    margin-top: 15%;
+    color: darkcyan;
+}
+
+#landing-page label {
+    font-size: 40px;
+    font-family: Forte;
+    color: darkcyan;
+}
