@@ -1,0 +1,58 @@
+#login {
+    padding: 10px;
+    margin-top: 30%;
+}
+
+#login h5 {
+    font-family: MV Boli;
+}
+
+#landing-page h3 {
+    margin-top: 5%;
+    font-family: Magneto;
+}
+
+#landing-page p {
+    font-family: Candara;
+    font-size: 22px;
+}
+
+.tabs {
+    background-color: darkcyan
+}
+
+.tabs .fa {
+    color: white;
+}
+
+#landing-page .tabs .indicator {
+    background-color: white;
+    height: 4px;
+}
+
+#link h4 {
+    font-family: MV Boli;
+    margin-top: 15%;
+    color: darkcyan;
+}
+
+#manage h4 {
+    font-family: MV Boli;
+    margin-top: 15%;
+    color: darkcyan;
+}
+
+#report h4 {
+    font-family: MV Boli;
+    margin-top: 15%;
+    color: darkcyan;
+}
+
+#landing-page label {
+    font-size: 40px;
+    font-family: Forte;
+    color: darkcyan;
+}
+
+.page-footer {
+}
