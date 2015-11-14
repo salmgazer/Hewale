@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="450e5321-14f5-494e-b9cb-28074e3c350b" name="Default" comment="Deleting nurses works perfectly. Accepting and rejecting nurses works perfectly, only that feedback must be given in UI.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/adb.php" afterPath="$PROJECT_DIR$/models/adb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/controller.php" afterPath="$PROJECT_DIR$/controller/controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/hospital.php" afterPath="$PROJECT_DIR$/models/hospital.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/model_admin.php" afterPath="$PROJECT_DIR$/models/model_admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/model_nurse.php" afterPath="$PROJECT_DIR$/models/model_nurse.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/model_task.php" afterPath="$PROJECT_DIR$/models/model_task.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="450e5321-14f5-494e-b9cb-28074e3c350b" name="Default" comment="Deleting nurses works perfectly. Accepting and rejecting nurses works perfectly, only that feedback must be given in UI." />
     <ignored path="Webtech.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -33,16 +25,9 @@
       <file leaf-file-name="hospital.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/hospital.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
-              <folding>
-                <marker date="1441988584452" expanded="true" signature="329:418" placeholder="INSERT into ..." />
-                <marker date="1441988584452" expanded="true" signature="585:646" placeholder="delete from ..." />
-                <marker date="1441988584452" expanded="true" signature="852:951" placeholder="select hospi..hospital..." />
-                <marker date="1441988584452" expanded="true" signature="1142:1199" placeholder="select * fro..hospital..." />
-                <marker date="1441988584452" expanded="true" signature="1397:1457" placeholder="update hospi..." />
-                <marker date="1441988584452" expanded="true" signature="1601:1623" placeholder="select * fro..hospital..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -50,14 +35,9 @@
       <file leaf-file-name="model_admin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/model_admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6153846">
+            <state vertical-scroll-proportion="0.0">
               <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-              <folding>
-                <marker date="1441988666460" expanded="true" signature="312:442" placeholder="INSERT INTO ..." />
-                <marker date="1441988666460" expanded="true" signature="744:889" placeholder="UPDATE admin..." />
-                <marker date="1441988666460" expanded="true" signature="1037:1077" placeholder="DELETE FROM ..." />
-                <marker date="1441988666460" expanded="true" signature="1288:1373" placeholder="SELECT * FRO..admin..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,9 +45,25 @@
       <file leaf-file-name="controller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="216.92308">
-              <caret line="98" column="1" selection-start-line="95" selection-start-column="22" selection-end-line="98" selection-end-column="1" />
+            <state vertical-scroll-proportion="-8.5">
+              <caret line="158" column="8" selection-start-line="158" selection-start-column="8" selection-end-line="171" selection-end-column="15" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.78061223">
+              <caret line="349" column="164" selection-start-line="349" selection-start-column="164" selection-end-line="349" selection-end-column="164" />
+              <folding>
+                <marker date="1442413039548" expanded="true" signature="11657:11736" placeholder="..." />
+                <marker date="1442413039548" expanded="true" signature="11869:11919" placeholder="..." />
+                <marker date="1442413039548" expanded="true" signature="12023:12061" placeholder="..." />
+                <marker date="1442413039548" expanded="true" signature="13703:13718" placeholder="..." />
+                <marker date="1442413039548" expanded="true" signature="15128:15143" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,47 +71,29 @@
       <file leaf-file-name="adb.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/adb.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="46.423077">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model_nurse.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/model_nurse.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-45.76923">
-              <caret line="70" column="17" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
-              <folding>
-                <marker date="1441988817807" expanded="true" signature="348:477" placeholder="INSERT into ..." />
-                <marker date="1441988817807" expanded="true" signature="712:808" placeholder="UPDATE nurse..." />
-                <marker date="1441988817807" expanded="true" signature="966:1016" placeholder="UPDATE nurse..." />
-                <marker date="1441988817807" expanded="true" signature="1185:1239" placeholder="SELECT * fro..nurse..." />
-                <marker date="1441988817807" expanded="true" signature="1509:1628" placeholder="SELECT * FRO..nurse..." />
-                <marker date="1441988817807" expanded="true" signature="1908:1970" placeholder="SELECT * fro..nurse..." />
-                <marker date="1441988817807" expanded="true" signature="2049:2155" placeholder="SELECT * fro..nurse..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="model_task.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="model_task.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/model_task.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3797251">
-              <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+            <state vertical-scroll-proportion="-4.576923">
+              <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
               <folding>
-                <marker date="1441994488311" expanded="true" signature="353:504" placeholder="INSERT INTO ..." />
-                <marker date="1441994488311" expanded="true" signature="748:854" placeholder="UPDATE task ..." />
-                <marker date="1441994488311" expanded="true" signature="1091:1184" placeholder="SELECT * FRO..task..." />
-                <marker date="1441994488311" expanded="true" signature="1415:1508" placeholder="SELECT * FRO..task..." />
-                <marker date="1441994488311" expanded="true" signature="1752:1894" placeholder="SELECT * FRO..task..." />
-                <marker date="1441994488311" expanded="true" signature="2183:2366" placeholder="SELECT * FRO..task..." />
-                <marker date="1441994488311" expanded="true" signature="2610:2676" placeholder="SELECT * FRO..task..." />
-                <marker date="1441994488311" expanded="true" signature="2965:3045" placeholder="SELECT * FRO..task..." />
-                <marker date="1441994488311" expanded="true" signature="3282:3334" placeholder="UPDATE task ..." />
-                <marker date="1441994488311" expanded="true" signature="3512:3565" placeholder="UPDATE task ..." />
+                <marker date="1442413039726" expanded="true" signature="353:504" placeholder="INSERT INTO ..." />
+                <marker date="1442413039726" expanded="true" signature="748:854" placeholder="UPDATE task ..." />
+                <marker date="1442413039726" expanded="true" signature="1091:1184" placeholder="SELECT * FRO..task..." />
+                <marker date="1442413039726" expanded="true" signature="1415:1508" placeholder="SELECT * FRO..task..." />
+                <marker date="1442413039726" expanded="true" signature="1752:1894" placeholder="SELECT * FRO..task..." />
+                <marker date="1442413039726" expanded="true" signature="2183:2366" placeholder="SELECT * FRO..task..." />
+                <marker date="1442413039726" expanded="true" signature="2610:2676" placeholder="SELECT * FRO..task..." />
+                <marker date="1442413039726" expanded="true" signature="2965:3045" placeholder="SELECT * FRO..task..." />
+                <marker date="1442413039726" expanded="true" signature="3282:3334" placeholder="UPDATE task ..." />
+                <marker date="1442413039726" expanded="true" signature="3512:3565" placeholder="UPDATE task ..." />
               </folding>
             </state>
           </provider>
@@ -169,9 +147,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="1370" />
-    <option name="height" value="745" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -196,6 +175,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -211,7 +191,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Nurseapp" />
+              <option name="myItemId" value="Hewale" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -221,45 +201,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Nurseapp" />
+              <option name="myItemId" value="Hewale" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Webtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nurseapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Webtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nurseapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -270,6 +221,7 @@
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="recentsLimit" value="5" />
+    <property name="SearchEverywhereHistoryKey" value="displayNurseTasks&#9;null&#9;null" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -335,10 +287,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1370" height="745" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14180207" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14128843" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -393,6 +345,25 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/models/model_task.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1442413039726" expanded="true" signature="353:504" placeholder="INSERT INTO ..." />
+            <marker date="1442413039726" expanded="true" signature="748:854" placeholder="UPDATE task ..." />
+            <marker date="1442413039726" expanded="true" signature="1091:1184" placeholder="SELECT * FRO..task..." />
+            <marker date="1442413039726" expanded="true" signature="1415:1508" placeholder="SELECT * FRO..task..." />
+            <marker date="1442413039726" expanded="true" signature="1752:1894" placeholder="SELECT * FRO..task..." />
+            <marker date="1442413039726" expanded="true" signature="2183:2366" placeholder="SELECT * FRO..task..." />
+            <marker date="1442413039726" expanded="true" signature="2610:2676" placeholder="SELECT * FRO..task..." />
+            <marker date="1442413039726" expanded="true" signature="2965:3045" placeholder="SELECT * FRO..task..." />
+            <marker date="1442413039726" expanded="true" signature="3282:3334" placeholder="UPDATE task ..." />
+            <marker date="1442413039726" expanded="true" signature="3512:3565" placeholder="UPDATE task ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/adb.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -442,16 +413,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
           <folding>
-            <marker date="1441994488311" expanded="true" signature="353:504" placeholder="INSERT INTO ..." />
-            <marker date="1441994488311" expanded="true" signature="748:854" placeholder="UPDATE task ..." />
-            <marker date="1441994488311" expanded="true" signature="1091:1184" placeholder="SELECT * FRO..task..." />
-            <marker date="1441994488311" expanded="true" signature="1415:1508" placeholder="SELECT * FRO..task..." />
-            <marker date="1441994488311" expanded="true" signature="1752:1894" placeholder="SELECT * FRO..task..." />
-            <marker date="1441994488311" expanded="true" signature="2183:2366" placeholder="SELECT * FRO..task..." />
-            <marker date="1441994488311" expanded="true" signature="2610:2676" placeholder="SELECT * FRO..task..." />
-            <marker date="1441994488311" expanded="true" signature="2965:3045" placeholder="SELECT * FRO..task..." />
-            <marker date="1441994488311" expanded="true" signature="3282:3334" placeholder="UPDATE task ..." />
-            <marker date="1441994488311" expanded="true" signature="3512:3565" placeholder="UPDATE task ..." />
+            <marker date="1442413039726" expanded="true" signature="353:504" placeholder="INSERT INTO ..." />
+            <marker date="1442413039726" expanded="true" signature="748:854" placeholder="UPDATE task ..." />
+            <marker date="1442413039726" expanded="true" signature="1091:1184" placeholder="SELECT * FRO..task..." />
+            <marker date="1442413039726" expanded="true" signature="1415:1508" placeholder="SELECT * FRO..task..." />
+            <marker date="1442413039726" expanded="true" signature="1752:1894" placeholder="SELECT * FRO..task..." />
+            <marker date="1442413039726" expanded="true" signature="2183:2366" placeholder="SELECT * FRO..task..." />
+            <marker date="1442413039726" expanded="true" signature="2610:2676" placeholder="SELECT * FRO..task..." />
+            <marker date="1442413039726" expanded="true" signature="2965:3045" placeholder="SELECT * FRO..task..." />
+            <marker date="1442413039726" expanded="true" signature="3282:3334" placeholder="UPDATE task ..." />
+            <marker date="1442413039726" expanded="true" signature="3512:3565" placeholder="UPDATE task ..." />
           </folding>
         </state>
       </provider>
@@ -667,13 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="399" column="528" selection-start-line="399" selection-start-column="528" selection-end-line="399" selection-end-column="528" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36717427">
@@ -692,14 +656,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
-          <folding>
-            <marker date="1441988584452" expanded="true" signature="329:418" placeholder="INSERT into ..." />
-            <marker date="1441988584452" expanded="true" signature="585:646" placeholder="delete from ..." />
-            <marker date="1441988584452" expanded="true" signature="852:951" placeholder="select hospi..hospital..." />
-            <marker date="1441988584452" expanded="true" signature="1142:1199" placeholder="select * fro..hospital..." />
-            <marker date="1441988584452" expanded="true" signature="1397:1457" placeholder="update hospi..." />
-            <marker date="1441988584452" expanded="true" signature="1601:1623" placeholder="select * fro..hospital..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -710,66 +667,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/adb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="46.423077">
-          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/model_admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846">
+        <state vertical-scroll-proportion="0.0">
           <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-          <folding>
-            <marker date="1441988666460" expanded="true" signature="312:442" placeholder="INSERT INTO ..." />
-            <marker date="1441988666460" expanded="true" signature="744:889" placeholder="UPDATE admin..." />
-            <marker date="1441988666460" expanded="true" signature="1037:1077" placeholder="DELETE FROM ..." />
-            <marker date="1441988666460" expanded="true" signature="1288:1373" placeholder="SELECT * FRO..admin..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="216.92308">
-          <caret line="98" column="1" selection-start-line="95" selection-start-column="22" selection-end-line="98" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/model_nurse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-45.76923">
-          <caret line="70" column="17" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
-          <folding>
-            <marker date="1441988817807" expanded="true" signature="348:477" placeholder="INSERT into ..." />
-            <marker date="1441988817807" expanded="true" signature="712:808" placeholder="UPDATE nurse..." />
-            <marker date="1441988817807" expanded="true" signature="966:1016" placeholder="UPDATE nurse..." />
-            <marker date="1441988817807" expanded="true" signature="1185:1239" placeholder="SELECT * fro..nurse..." />
-            <marker date="1441988817807" expanded="true" signature="1509:1628" placeholder="SELECT * FRO..nurse..." />
-            <marker date="1441988817807" expanded="true" signature="1908:1970" placeholder="SELECT * fro..nurse..." />
-            <marker date="1441988817807" expanded="true" signature="2049:2155" placeholder="SELECT * fro..nurse..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/model_task.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3797251">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
           <folding>
-            <marker date="1441994488311" expanded="true" signature="353:504" placeholder="INSERT INTO ..." />
-            <marker date="1441994488311" expanded="true" signature="748:854" placeholder="UPDATE task ..." />
-            <marker date="1441994488311" expanded="true" signature="1091:1184" placeholder="SELECT * FRO..task..." />
-            <marker date="1441994488311" expanded="true" signature="1415:1508" placeholder="SELECT * FRO..task..." />
-            <marker date="1441994488311" expanded="true" signature="1752:1894" placeholder="SELECT * FRO..task..." />
-            <marker date="1441994488311" expanded="true" signature="2183:2366" placeholder="SELECT * FRO..task..." />
-            <marker date="1441994488311" expanded="true" signature="2610:2676" placeholder="SELECT * FRO..task..." />
-            <marker date="1441994488311" expanded="true" signature="2965:3045" placeholder="SELECT * FRO..task..." />
-            <marker date="1441994488311" expanded="true" signature="3282:3334" placeholder="UPDATE task ..." />
-            <marker date="1441994488311" expanded="true" signature="3512:3565" placeholder="UPDATE task ..." />
+            <marker date="1442413039726" expanded="true" signature="353:504" placeholder="INSERT INTO ..." />
+            <marker date="1442413039726" expanded="true" signature="748:854" placeholder="UPDATE task ..." />
+            <marker date="1442413039726" expanded="true" signature="1091:1184" placeholder="SELECT * FRO..task..." />
+            <marker date="1442413039726" expanded="true" signature="1415:1508" placeholder="SELECT * FRO..task..." />
+            <marker date="1442413039726" expanded="true" signature="1752:1894" placeholder="SELECT * FRO..task..." />
+            <marker date="1442413039726" expanded="true" signature="2183:2366" placeholder="SELECT * FRO..task..." />
+            <marker date="1442413039726" expanded="true" signature="2610:2676" placeholder="SELECT * FRO..task..." />
+            <marker date="1442413039726" expanded="true" signature="2965:3045" placeholder="SELECT * FRO..task..." />
+            <marker date="1442413039726" expanded="true" signature="3282:3334" placeholder="UPDATE task ..." />
+            <marker date="1442413039726" expanded="true" signature="3512:3565" placeholder="UPDATE task ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/model_nurse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28087986">
+          <caret line="70" column="17" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+          <folding>
+            <marker date="1442413039697" expanded="true" signature="-1:-1" placeholder="INSERT into ..." />
+            <marker date="1442413039697" expanded="true" signature="-1:-1" placeholder="UPDATE nurse..." />
+            <marker date="1442413039697" expanded="true" signature="-1:-1" placeholder="UPDATE nurse..." />
+            <marker date="1442413039697" expanded="true" signature="-1:-1" placeholder="SELECT * fro..nurse..." />
+            <marker date="1442413039697" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..nurse..." />
+            <marker date="1442413039697" expanded="true" signature="-1:-1" placeholder="SELECT * fro..nurse..." />
+            <marker date="1442413039697" expanded="true" signature="-1:-1" placeholder="SELECT * fro..nurse..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/adb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5">
+          <caret line="158" column="8" selection-start-line="158" selection-start-column="8" selection-end-line="171" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78061223">
+          <caret line="349" column="164" selection-start-line="349" selection-start-column="164" selection-end-line="349" selection-end-column="164" />
+          <folding>
+            <marker date="1442413039548" expanded="true" signature="11657:11736" placeholder="..." />
+            <marker date="1442413039548" expanded="true" signature="11869:11919" placeholder="..." />
+            <marker date="1442413039548" expanded="true" signature="12023:12061" placeholder="..." />
+            <marker date="1442413039548" expanded="true" signature="13703:13718" placeholder="..." />
+            <marker date="1442413039548" expanded="true" signature="15128:15143" placeholder="..." />
           </folding>
         </state>
       </provider>
