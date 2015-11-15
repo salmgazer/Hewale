@@ -59,37 +59,23 @@ switch($cmd) {
 }
 
 /**
- * login for both nurse and admin
+ * Function to login nurse
  */
 function login(){
-    $user_type = $_REQUEST['user_type'];
-    $username = $_REQUEST['username'];
+    $email = $_REQUEST['email'];
     $password = $_REQUEST['password'];
 
-    if($user_type == 'admin'){
-        include('../models/model_admin.php');
-        $admin = new admin();
-        $row = $admin->login($username, $password);
+        include('../models/account.php');
+        $account = new account();
+        $row = $account->login($username, $password);
         if(!$row){
-            echo '{"result":0,"message": "Your details as an admin are wrong."}';
+            echo '{"result":0,"message": "Your details are wrong."}';
             return;
         }
-        set_admin_session($row);
-        echo '{"result":1,"message": "'.$_SESSION['admin_fn'].' is logged in"}';
+        set_session($row);
+        echo '{"result":1,"message": "'.$_SESSION['fullname'].' is logged in"}';
         return;
-
-    }elseif($user_type == 'nurse'){
-        include('../models/model_nurse.php');
-        $nurse = new nurse();
-        $row = $nurse->login($username, $password);
-        if(!$row){
-            echo '{"result":0,"message": "Your details as a nurse are wrong."}';
-            return;
-        }
-        set_nurse_session($row);
-        echo '{"result":1,"message": "'.$_SESSION['nurse_name'].' is logged in"}';
-        return;
-    }
+    
 }
 
 /**
@@ -287,25 +273,13 @@ echo '{"result":2,"message": "You need to log in first."}';
         return;
 }
 
-//set nurse sessions
-function set_nurse_session($row){
-    $_SESSION['nurse_username'] = $row['username'];
-    $_SESSION['nurse_pass'] = $row['password'];
-    $_SESSION['nurse_name'] = $row['fullname'];
-    $_SESSION['user_status'] = $row['status'];
-    $_SESSION['nurse_id'] = $row['nurse_id'];
-    $_SESSION['hospital_id'] = $row['hospital_id'];
-}
-
-//set admin sessions
-function set_admin_session($row){
-    $_SESSION['admin_username'] = $row['username'];
-    $_SESSION['admin_pass'] = $row['password'];
-    $_SESSION['admin_fn'] = $row['firstname'];
-    $_SESSION['admin_ln'] = $row['lastname'];
-    $_SESSION['user_status'] = 'admin';
-    $_SESSION['admin_id'] = $row['admin_id'];
-    $_SESSION['hospital_id'] = $row['hospital_id'];
+//set sessions details
+function set_session($row){
+    $_SESSION['fullname'] = $row['fullname'];
+    $_SESSION['email'] = $row['email'];
+    $_SESSION['password'] = $row['password'];
+    $_SESSION['type'] = $row['account_type'];
+    $_SESSION['id'] = 'account_id';
 
 }
 

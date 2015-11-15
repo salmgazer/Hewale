@@ -3,6 +3,11 @@
     margin-top: 30%;
 }
 
+#login {
+    border-left-color: darkcyan;
+    border-left: 1px solid darkcyan;
+}
+
 #login h5 {
     font-family: MV Boli;
 }
@@ -11,6 +16,7 @@
     margin-top: 5%;
     font-family: Magneto;
 }
+
 
 #landing-page p {
     font-family: Candara;
@@ -30,20 +36,22 @@
     height: 4px;
 }
 
+
+
 #link h4 {
-    font-family: MV Boli;
+    font-family: Century Gothic;
     margin-top: 15%;
     color: darkcyan;
 }
 
 #manage h4 {
-    font-family: MV Boli;
+    font-family: Century Gothic;
     margin-top: 15%;
     color: darkcyan;
 }
 
 #report h4 {
-    font-family: MV Boli;
+    font-family: Century Gothic;
     margin-top: 15%;
     color: darkcyan;
 }
