@@ -4,11 +4,11 @@
  * description: A root class for all manage classes. This class communicates with DB
  */
 
-define("DB_HOST", 'localhost');
-define("DB_NAME", 'nurse_task_manager');
+define("DB_HOST", 'sql312.byethost31.com');
+define("DB_NAME", 'b31_16836922_hewale');
 define("DB_PORT", 3306);
-define("DB_USER", "root");
-define("DB_PWORD", "");
+define("DB_USER", "b31_16836922");
+define("DB_PWORD", "mole123");
 
 /*
 define("DB_HOST", 'localhost');
