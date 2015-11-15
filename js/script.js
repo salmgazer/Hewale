@@ -10,9 +10,13 @@ $(function () {
 function login() {
     email = document.getElementById('email').value;
     password = document.getElementById('password').value;
-	var strUrl = "../controller/controller.php?email="+email+"&password="+password;
+    //alert(email);
+	var strUrl = "./controller/controller.php?cmd=1&email="+email+"&password="+password;
 	var objResult = sendRequest(strUrl);
 	if (objResult.result == 1) {
 		window.location.href = "home.html";
 	}
+    else if(objResult.result == 0){
+        alert("wrong details");
+    }
 }
