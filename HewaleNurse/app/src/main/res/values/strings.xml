@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Hewale Nurse</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="forgotten">forgotten password</string>
+    <string name="sign">Sign in</string>
+    <string name="hewale">Hewale</string>
+    <string name="title_activity_home_page">homePage</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nice">Logo</string>
+    <string name="nurse_home">Nurse Home</string>
+    <string name="nurse_tasks">Nurse Tasks</string>
+    <string name="nurse_profile">Nurse Profile</string>
+
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
