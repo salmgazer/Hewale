@@ -9,18 +9,20 @@ $task = new task();
 
 
 //function to assgin a new task to a nurse
-function addTask(){
-    if(isset($_SESSION['admin_id']) && isset($_SESSION['hospital_id'])){
+function addtask(){
+    if(isset($_SESSION['admin_id']) && isset($_SESSION['nurse_id'])){
         include('../models/model_task.php');
         $task = new task();
+
+
+        $nurse_id = $_REQUEST['nid'];
+        $task_id = $_SESSION['aid'];
         $desc = $_REQUEST['desc'];
-        $summ = $_REQUEST['summ'];
         $start = $_REQUEST['start'];
         $end = $_REQUEST['end'];
-        $nurse_id = $_REQUEST['nurse_id'];
-        $admin_id = $_SESSION['admin_id'];
 
-        $row = $task->addtask($desc, $summ, $admin_id, $nurse_id, $start, $end);
+
+        $row = $task->addtask( $task_id, $nurse_id, $desc, $start, $end);
         if(!$row){
             echo '{"result": 0, "message": "Task was not added"}';
             return;
