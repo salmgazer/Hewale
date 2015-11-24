@@ -62,5 +62,9 @@
     color: darkcyan;
 }
 
+tr {
+  height: 40px;
+}
+
 .page-footer {
 }
