@@ -17,7 +17,7 @@ class nurse extends adb {
 	 function add_nurse($name, $user, $status, $password, $hospital_id) {
 		$str_sql = "INSERT into nurse (fullname,username,status, password,hospital_id)
 		VALUES ('$name','$user', '$status','$password',$hospital_id)";
-		return $this->query($str_sql); 
+		return $this->query($str_sql);
 	 }
 
     /**
@@ -28,8 +28,8 @@ class nurse extends adb {
      */
 	 function update_nurse($nurse_id, $user,$hospital_id) {
 		$str_sql = "UPDATE nurse SET username='$user', hospital_id=$hospital_id WHERE nurse_id = $nurse_id limit 0,1";
-		
-		return $this->query($str_sql); 
+
+		return $this->query($str_sql);
 	 }
 
     /**
@@ -38,7 +38,7 @@ class nurse extends adb {
      */
 	function removeNurse($nurse_id) {
 		$str_sql = "UPDATE nurse set existence = 'no' where nurse_id =$nurse_id";
-		return $this->query($str_sql); 
+		return $this->query($str_sql);
 	 }
 
     /**
@@ -49,8 +49,8 @@ class nurse extends adb {
 		$str_sql = "SELECT * from nurse where nurse_id=$nurse_id limit 0,1";
 		if(!$this->query($str_sql)){
 			return false;
-		}	
-		return $this->fetch(); 
+		}
+		return $this->fetch();
 	 }
 
     /**
@@ -71,19 +71,16 @@ class nurse extends adb {
      * @param String $nurse_status
      * @return array|bool
      */
-    function getAllNurses($hospital_id, $nurse_status) {
-            $str_sql = "SELECT * from nurse where existence = 'yes' AND hospital_id = $hospital_id";
-            if($nurse_status != 'all'){
-            $str_sql = "SELECT * from nurse where existence = 'yes' AND hospital_id = $hospital_id and status like '$nurse_status'";
-        }
-		if(!$this->query($str_sql)) {
-            return false;
-        }
-        return $this->fetch();
+    function get_all_nurses() {
+			$str_sql = "SELECT * FROM h_nurse";
+			if (!$this->query($str_sql)) {
+				return false;
+			}
+      return $this->fetch();
 	 }
 
 }
 
 
- 
+
 ?>
