@@ -5,7 +5,15 @@ $(function () {
 	});
 });
 
-
+function sendRequest(u){
+    // Send request to server
+    //u a url as a string
+    //async is type of request
+    var obj=$.ajax({url:u,async:false});
+    //Convert the JSON string to object
+    var result=$.parseJSON(obj.responseText);
+    return result;	//return object
+}
 
 /** Functions **/
 function login() {
@@ -29,7 +37,8 @@ function display_all_nurses() {
 		nurses = objResult.nurse;
 		nurseTableBody = "";
 		for (var i = 0; i < nurses.length; i++) {
-			nurseTableBody += "<tr><td>"+i+"</td><td>"+nurses['fullname']+"</td><td>"+nurses['location']+"</td><td><button>Try<button></td></tr>"
+			nurseTableBody += "<tr><td>"+(i+1)+"</td><td>"+nurses[i]['fullname']+"</td><td>"+nurses[i]['location']+"</td><td><button>Try</button></td></tr>"
 		}
+		document.getElementById("nurses").innerHTML = nurseTableBody;
 	}
 }
