@@ -40,9 +40,9 @@ function login(){
 }
 
 function get_all_nurses() {
-  if(!isset($_SESSION['id'])) {
-    return;
-  }
+  //if(!isset($_SESSION['id'])) {
+    //return;
+  //}
   include_once('../models/nurse.php');
   $nurse = new nurse();
   $row = $nurse->get_all_nurses();
@@ -53,7 +53,7 @@ function get_all_nurses() {
   echo '{"result":1, "nurse":[';
   while ($row) {
     echo json_encode($row);
-    $row = $nurse->fetch()
+    $row = $nurse->fetch();
     if ($row) {
       echo ",";
     }
