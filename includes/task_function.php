@@ -25,6 +25,15 @@ include_once('../models/adb.php');
         return $this->query($str_sql);
     }
 
+/**
+ * @param int $task_id
+ * @return bool
+ */
+   function removetask($task_id) {
+    $str_sql = "UPDATE task set existence = 'no' where task_id =$task_id";
+    return $this->query($str_sql);
+   }
+
     /**
      * @param $id
      * @param $desc
@@ -38,17 +47,6 @@ include_once('../models/adb.php');
         return $this->query($str_sql);
     }
 
-    /**
-     * @param $id
-     * @return array|bool
-     */
-    function admin_find_task($id)
-    {
-        $str_sql = "SELECT * FROM task, nurse WHERE task.task_id=$id AND nurse.nurse_id = task.nurse_id limit 0,1";
-        if (!$this->query($str_sql)) {
-            return false;
-        }
-        return $this->fetch();
-    }
+
 
 ?>
