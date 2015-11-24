@@ -11,46 +11,7 @@ switch($cmd) {
         login();
         break;
     case 2:
-        getAllNurseTasks();
-        break;
-    case 3:
-        getAllNurseSpecTasks();
-        break;
-    case 4:
-        getAllAdminTasks();
-        break;
-    case 5:
-        getAllAdminSpecTasks();
-        break;
-    case 6:
-        find_task();
-        break;
-    case 7:
-        getAllHospitals();
-        break;
-    case 8:
-        addNurse();
-        break;
-    case 9:
-        getAllNurses();
-        break;
-    case 10:
-        addTask();
-        break;
-    case 11:
-        accept_completion();
-        break;
-    case 12:
-        reject_completion();
-        break;
-    case 13:
-        register();
-        break;
-    case 14:
-        logout();
-        break;
-    case 15:
-        removeNurse();
+        get_all_nurses();
         break;
     default:
         echo '{"result":0, message:"unknown command"}';
@@ -75,7 +36,30 @@ function login(){
         set_session($row);
         echo '{"result":1,"message": "'.$_SESSION['fullname'].' is logged in"}';
         return;
-    
+
+}
+
+function get_all_nurses() {
+  //if(!isset($_SESSION['id'])) {
+    //return;
+  //}
+  include_once('../models/nurse.php');
+  $nurse = new nurse();
+  $row = $nurse->get_all_nurses();
+  if (!$row) {
+    echo '{"result":0, "message": "No nurse available."}';
+    return;
+  }
+  echo '{"result":1, "nurse":[';
+  while ($row) {
+    echo json_encode($row);
+    $row = $nurse->fetch();
+    if ($row) {
+      echo ",";
+    }
+  }
+  echo ']}';
+  return;
 }
 
 /**
@@ -279,7 +263,7 @@ function set_session($row){
     $_SESSION['email'] = $row['email'];
     $_SESSION['password'] = $row['password'];
     $_SESSION['type'] = $row['account_type'];
-    $_SESSION['id'] = 'account_id';
+    $_SESSION['id'] = $row['account_id'];
 
 }
 
