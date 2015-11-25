@@ -14,7 +14,7 @@ class nurse extends adb {
 
 	}
 	/**
-	*@method boolean add_nurse() Adds a Nurse
+	*@method boolean add_nurse() This Adds a Nurse
 	*@param String name name of nurse
 	*@param String account whether the user is an administrator or nurse
 	*@param String email the email of the nurse
