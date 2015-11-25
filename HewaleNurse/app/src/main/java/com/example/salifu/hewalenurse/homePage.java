@@ -1,5 +1,7 @@
 package com.example.salifu.hewalenurse;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -87,17 +89,32 @@ public class homePage extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        Fragment myfrag = null;
         int id = item.getItemId();
 
         if (id == R.id.home) {
             // Handle the camera action
+            myfrag = new NurseHome();
+            getSupportActionBar().setTitle("Home");
         } else if (id == R.id.tasks) {
+            myfrag = new NurseTasks();
+            getSupportActionBar().setTitle("Tasks");
 
         } else if (id == R.id.profile) {
-
+            myfrag =  new NurseProfile();
+            getSupportActionBar().setTitle("My Profile");
         } else if (id == R.id.signout) {
-
+            Intent intent = getIntent();
+            intent.removeExtra("username");
+            intent.removeExtra("password");
+            intent.removeExtra("role");
+            intent = new Intent(this, Login.class);
+            startActivity(intent);
+            return false;
         }
+
+        FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.nursecontainer, myfrag).commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

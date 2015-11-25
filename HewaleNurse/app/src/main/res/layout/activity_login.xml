@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
     android:layout_height="fill_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Login"
-    android:background="#5391c4"
-    android:contextClickable="true">
+    android:contextClickable="true"
+    android:theme="@android:style/Theme.Black.NoTitleBar"
+    android:background="#03A9F4"
+    >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/login1"
+        android:contentDescription="backpic" />
 
     <EditText
         android:layout_width="match_parent"
@@ -15,7 +24,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="145dp"
         android:hint="@string/username"
-        android:textColor="#ffffff"
+        android:textColor="#0f23b6"
         android:textColorHint="#ffffff"
         android:textColorHighlight="#ffffff"
         android:layout_marginLeft="40dp"
@@ -35,20 +44,24 @@
         android:layout_marginStart="40dp"
         android:layout_alignRight="@+id/username"
         android:layout_alignEnd="@+id/username"
-        android:textColor="#ffffff"
-        android:textColorHint="#ffffff" />
+        android:textColorHint="#ffffff"
+        android:textColor="#0f23b6" />
 
     <Button
         android:layout_width="fill_parent"
-        android:layout_height="90dp"
+        android:layout_height="50dp"
         android:text="@string/sign"
         android:id="@+id/signInBtn"
         android:onClick="signIn"
-        android:layout_alignParentBottom="true"
         android:textSize="20sp"
         android:background="#4dd196"
         android:textColor="#ffffff"
-        android:clickable="true" />
+        android:clickable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/password"
+        android:layout_alignStart="@+id/password"
+        android:layout_alignRight="@+id/password"
+        android:layout_alignEnd="@+id/password" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -56,22 +69,21 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/forgotten"
         android:id="@+id/forgotten"
-        android:layout_marginTop="54dp"
         android:textColor="#ffffff"
-        android:layout_below="@+id/password"
+        android:layout_marginBottom="46dp"
+        android:layout_above="@+id/signInBtn"
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/hewale"
         android:id="@+id/hewale"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/username"
-        android:layout_alignStart="@+id/username"
-        android:layout_alignRight="@+id/username"
-        android:layout_alignEnd="@+id/username"
-        android:textSize="80sp"
-        android:textColor="#ffffff" />
+        android:textSize="60sp"
+        android:textIsSelectable="false"
+        android:textAlignment="center"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
 </RelativeLayout>

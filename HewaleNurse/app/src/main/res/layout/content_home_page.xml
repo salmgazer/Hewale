@@ -8,6 +8,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_home_page"
-    tools:context="com.example.salifu.hewalenurse.homePage">
+    tools:context="com.example.salifu.hewalenurse.homePage"
+    android:id="@+id/nursecontainer">
 
 </RelativeLayout>

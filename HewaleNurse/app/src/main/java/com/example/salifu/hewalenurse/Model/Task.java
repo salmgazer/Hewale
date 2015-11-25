@@ -9,6 +9,13 @@ public class Task {
     public String date_assigned;
     public String deadline;
 
+    /**
+     *
+     * @param task_details
+     * @param task_summary
+     * @param date_assigned
+     * @param deadline
+     */
     public Task(String task_details, String task_summary, String date_assigned, String deadline){
         this.task_details = task_details;
         this.task_summary = task_summary;
