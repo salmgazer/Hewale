@@ -1,9 +1,7 @@
 package com.example.salifu.hewalenurse;
 
-import android.app.Activity;
-import android.os.Bundle;
 import android.app.Fragment;
-import android.support.annotation.Nullable;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +10,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.salifu.hewalenurse.dummy.DummyContent;
+
 
 /**
  * A fragment representing a list of Items.
@@ -76,8 +73,8 @@ public class NurseTasks extends Fragment implements AbsListView.OnItemClickListe
         }
 
         // TODO: Change Adapter to display your content
-        mAdapter = new ArrayAdapter<DummyContent.DummyItem>(getActivity(),
-                android.R.layout.simple_list_item_1, android.R.id.text1, DummyContent.ITEMS);
+       /* mAdapter = new ArrayAdapter<DummyContent.DummyItem>(getActivity(),
+                android.R.layout.simple_list_item_1, android.R.id.text1, DummyContent.ITEMS);*/
     }
 
     @Override
@@ -107,7 +104,7 @@ public class NurseTasks extends Fragment implements AbsListView.OnItemClickListe
         if (null != mListener) {
             // Notify the active callbacks interface (the activity, if the
             // fragment is attached to one) that an item has been selected.
-            mListener.onFragmentInteraction(DummyContent.ITEMS.get(position).id);
+           // mListener.onFragmentInteraction(DummyContent.ITEMS.get(position).id);
         }
     }
 
