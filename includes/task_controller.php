@@ -1,25 +1,25 @@
-
 <?php session_start();
 
-include_once('../models/model_task.php');
+/**
+ *@author comfort tenjier
+ */
+
 include_once('../models/model_user.php');
-
+include_once('../models/task_function.php');
 //create instances
-$task = new task();
-
+$tasks = new tasks();
 
 //function to assgin a new task to a nurse
 function addtask(){
-    if(isset($_SESSION['admin_id']) && isset($_SESSION['nurse_id'])){
+    if(isset($_SESSION['admin_id']) && isset($_SESSION['task_id'])){
         /*include('../models/model_task.php');*/
-        $task = new task();
-
-        $nurse_id = $_REQUEST['nid'];
-        $task_id = $_SESSION['aid'];
+        $tasks = new tasks();
+        $task_id = $_REQUEST['nid'];
+        $admin_id = $_SESSION['aid'];
         $desc = $_REQUEST['desc'];
         $start = $_REQUEST['start'];
         $end = $_REQUEST['end'];
-        $row = $task->addtask( $task_id, $nurse_id, $desc, $start, $end);
+        $row = $tasks->addtask( $task_id, $admin_id, $desc, $start, $end);
         if(!$row){
             echo '{"result": 0, "message": "Task was not added"}';
             return;
@@ -28,17 +28,15 @@ function addtask(){
         return;
     }
     echo '{"result": 2, "message": "You need to first login"}';
-        return;
+    return;
 }
-
-
 //function to remove a task from a list a list of tasks
 function removetask(){
     if(isset($_SESSION['admin_id'])){
         $task_id = $_REQUEST['task_id'];
         /*include('../models/model_task.php');*/
-        $task = new task();
-        $row = $task->removetask($task_id);
+        $tasks = new tasks();
+        $row = $tasks->removetask($task_id);
         if(!$row){
             echo '{"result": 0, "message": "Unable to remove task, try again later"}';
             return;
@@ -50,6 +48,26 @@ function removetask(){
     return;
 }
 
+
+//function update a task assigned to a nurse
+function updatetask(){
+    if(isset($_SESSION['admin_id']) && isset($_SESSION['task_id'])){
+        /*include('../models/model_task.php');*/
+        $tasks = new tasks();
+        $desc = $_REQUEST['desc'];
+        $start = $_REQUEST['start'];
+        $end = $_REQUEST['end'];
+        $row = $tasks->addtask($desc, $start, $end);
+        if(!$row){
+            echo '{"result": 0, "message": "Task was not updated"}';
+            return;
+        }
+        echo '{"result": 1, "message": "Task has been updated"}';
+        return;
+    }
+    echo '{"result": 2, "message": "You need to first login"}';
+    return;
+}
 
 
 ?>
