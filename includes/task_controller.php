@@ -3,6 +3,28 @@
 /**
  *@author comfort tenjier
  */
+if(!isset($_REQUEST['cmd']))
+{
+    echo '{"result":0,message:"unknown command"}';
+    exit();
+}
+$cmd=$_REQUEST['cmd'];
+switch($cmd) {
+    case 1:
+        addtask();
+        break;
+    case 2:
+        removetask();
+        break;
+    case 3:
+       updatetask();
+        break;
+    default:
+        echo '{"result":0, message:"unknown command"}';
+        break;
+
+}
+
 
 include_once('../models/model_user.php');
 include_once('../models/task_function.php');
