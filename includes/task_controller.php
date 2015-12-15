@@ -10,8 +10,10 @@ include_once('../models/task_function.php');
 $tasks = new tasks();
 
 //function to assgin a new task to a nurse
-function addtask(){
-    if(isset($_SESSION['admin_id']) && isset($_SESSION['task_id'])){
+function addtask()
+{
+    if(isset($_SESSION['admin_id']) && isset($_SESSION['task_id']))
+    {
         /*include('../models/model_task.php');*/
         $tasks = new tasks();
         $task_id = $_REQUEST['nid'];
@@ -30,9 +32,13 @@ function addtask(){
     echo '{"result": 2, "message": "You need to first login"}';
     return;
 }
+
+
 //function to remove a task from a list a list of tasks
-function removetask(){
-    if(isset($_SESSION['admin_id'])){
+function removetask()
+{
+    if(isset($_SESSION['admin_id']))
+    {
         $task_id = $_REQUEST['task_id'];
         /*include('../models/model_task.php');*/
         $tasks = new tasks();
@@ -50,8 +56,10 @@ function removetask(){
 
 
 //function update a task assigned to a nurse
-function updatetask(){
-    if(isset($_SESSION['admin_id']) && isset($_SESSION['task_id'])){
+function updatetask()
+{
+    if(isset($_SESSION['admin_id']) && isset($_SESSION['task_id']))
+    {
         /*include('../models/model_task.php');*/
         $tasks = new tasks();
         $desc = $_REQUEST['desc'];
@@ -68,6 +76,5 @@ function updatetask(){
     echo '{"result": 2, "message": "You need to first login"}';
     return;
 }
-
 
 ?>
