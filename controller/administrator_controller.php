@@ -4,6 +4,10 @@
 *@author William Annoh
 */
 
+include("../models/comment.php");
+include("../models/model_admin.php");
+include("../models/model_nurse.php");
+
 session_start();
 
 if(!isset($_REQUEST['cmd'])){
@@ -51,6 +55,7 @@ function addComment(){
         echo '{"result": 1, "message": "Comment has been added"}';
         return;
 }
+
 /**
     *This method deletes a comment
     *
@@ -60,11 +65,32 @@ function delComment(){
 if(isset($_REQUEST['comment_id'])){
     $comment_id = $_REQUEST['comment_id'];
     $comment = new comments();
-    if(!$comments->removeComment($comment_id)){
+    if(!$comments->delComment($comment_id)){
         echo '{"result": 0, "message": "Unable to remove comment, try again later"}';
         return;
     }
     echo '{"result": 1, "message": "Comment has been removed successfully"}';
+    return;
+}
+    echo '{"result": 2, "message": "Function parameters not set"}';
+    return;
+}
+
+/**
+    *This method views a comment
+    *
+    *@param int id ID of the comment to be viewed 
+    */
+
+function viewComment(){
+if(isset($_REQUEST['comment_id'])){
+    $comment_id = $_REQUEST['comment_id'];
+    $comment = new comments();
+    if(!$comment->viewComment($comment_id)){
+        echo '{"result": 0, "message": "Unable to view comment, try again later"}';
+        return;
+    }
+    echo '{"result": 1, "message": "Comment has been viewed successfully"}';
     return;
 }
     echo '{"result": 2, "message": "Function parameters not set"}';
