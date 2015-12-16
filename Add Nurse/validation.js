@@ -46,3 +46,40 @@ function checkname()  {
 		alert("Unable to add");
 	}
 }
+
+function deletenurse(){
+		
+		
+		
+		var id = $("#id").val();
+		
+		//store url 
+		var strUrl = "http://cs.ashesi.edu.gh/~csashesi/class2016/adjoa-kwakye/Add%20Nurse/ajaxnurse.php?cmd=2&id="+id;
+	// var strUrl = "response.php?cmd=6";
+	var objResult=sendRequest(strUrl);
+	if(objResult.result==1){
+		alert("Success deleting a nurse");
+	}
+	else{
+		alert("Unable to delete");
+	}
+}
+
+function searchnurse(){
+		//create variables to store values from the form
+		if(!checkname()){
+			alert("check name");
+			return;
+				
+		var name = $("#name").val();
+		//store url 
+		var strUrl = "http://cs.ashesi.edu.gh/~csashesi/class2016/adjoa-kwakye/Add%20Nurse/ajaxnurse.php?cmd=3&name="+name;
+	// var strUrl = "response.php?cmd=6";
+	var objResult=sendRequest(strUrl);
+	if(objResult.result==1){
+		alert("Success searching a nurse");
+	}
+	else{
+		alert("Unable to find nurse");
+	}
+}
