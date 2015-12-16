@@ -1,51 +1,110 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>iCare - Manage hospital task with ease</title>
-		<link rel="stylesheet" type="text/css" href="css/new.css">
-        <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
-        <script type="text/javascript" src="js/script.js"></script>
-    </head>
+  <head>
+    <title>Hewale | Login</title>
+    <!-- Google materialite css -->
+    <link rel="stylesheet" href="materialize/css/materialize.min.css">
+    <!-- Custome css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="fa/css/font-awesome.min.css">
+
+    <!-- Google material js -->
     
-    <body style="background-color:white;">
-        <div id="landing-1"></div>
-        <div id="landing-1-cover">
-            <div id="landing-header">
-            Software Engineering
-                <div id="landing-app-name">iCare</div>
-                <div id="options">
-                    <a href="enter.html">
-                        <button id="landing-button" style="border: 4px solid lightgreen; color:lightgreen">LOG IN</button>
-                    </a>
-                    <a href="register.html"><button id="landing-button" style="border: 4px solid brown;">REGISTER</button></a>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="materialize/js/materialize.min.js"></script>
+      
+    <script src="js/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+          
+        <!-- Landing page container -->
+        <div class="col s7" id="landing-page">
+            <center><h3 class="cyan-text text-darken-3">Hewale</h3></center>
+            <div class="divider cyan darken-4"></div><br>
+            <!-- Tabs container -->
+            <div class="row">
+                <div class="col s12">
+                    <ul class="tabs">
+                        <li class="tab col s4"><a href="#link"><i class="fa fa-link fa-3x"></i></a></li>
+                        <li class="tab col s4"><a href="#manage"><i class="fa fa-user-md fa-3x"></i></a></li>
+                        <li class="tab col s4"><a href="#report"><i class="fa fa-book fa-3x"></i></a></li>
+                    </ul>
                 </div>
+                
+                <!-- Link tabs container -->
+                <div id="link" class="col s12">
+                    <h4>Connecting Health Personels</h4>
+                    <center><p>Connecting community nurses and district health officers to better serve people with health conditions<label> & </label>report on observations.</p></center>
+                </div><!-- end of tabs container -->
+                
+                <!-- manage container -->
+                <div id="manage" class="col s12">
+                    <h4>Manage Health Personels</h4>
+                    <center><p>Connecting community nurses and district health officers to better serve people with health conditions<label> & </label>report on observations.</p></center>
+                </div> <!--end of manage container -->
+                
+                <!-- manage container -->
+                <div id="report" class="col s12">
+                    <h4>Manage Health Reports</h4>
+                    <center><p>Connecting community nurses and district health officers to better serve people with health conditions<label> & </label>report on observations.</p></center>
+                </div> <!--end of manage container -->
+            </div> <!-- end of tabs container -->
+        </div> <!-- End of landing page container -->
+          
+        <!-- Login form container -->
+        <div class="col s5">
+          <!-- Login form -->
+          <form class="col s8 offset-s2" id="login">
+            <center><h5 class="cyan-text text-darken-3">Sign In</h5></center>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
             </div>
-            
-            <div id="landing-1-message">
-                <center>
-                    <label style="font-size:55px;">An Easy Life for your Nurses</label><br>
-                    <label style="font-size:24px;">Assign nurses tasks and manage each task remotely. Make the world smaller than it is.</label>
-                </center>
+            <div class="row">
+              <div class="input-field col s12">
+                  <i class="material-icons prefix">vpn_key</i>
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+              </div>
             </div>
-        </div>
-        
-        <div id="landing-2">
-        This is a status in test1 branch
-            <div id="landing-2-message">
-                <label style="font-size:35px;">Trends come to you</label><br><br>
-                <label style="font-size:18px;">iCare knows you need the flexibility to manage your nurses.<br> Do not wait for the trends, create them today, by creating an account with us.</label>
+              <button class="btn waves-effect waves-light col s11 offset-s1 cyan darken-3" type="submit"><i class="fa fa-sign-in"></i> Sign in</button>
+          </form> <!-- End of login form -->
+        </div> <!-- End of login form container -->
+
+      </div>
+        <footer class="page-footer cyan darken-4">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Hewale</h5>
+                <p class="grey-text text-lighten-4">Using technology to solve better the health system.</p>
+              </div>
+                <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Contact</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#">Phone: (+233) 054 842 7966</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Email: support@hewale.com</a></li>
+                </ul>
+              </div>
             </div>
-            <div id="landing-2-img">
-                <img src="img/landing2.jpg" style="width:100%; height:100%; -webkit-box-shadow: -2px -2px 28px 0px rgba(0,0,0,0.75);-moz-box-shadow: -2px -2px 28px 0px rgba(0,0,0,0.75);box-shadow: -2px -2px 28px 0px rgba(0,0,0,0.75);">
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2015 Hewale
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
-        </div>
-        
-        <div id="landing-3">
-            <div id="landing-3-message">
-                <center>
-                    <label>All you need to start using this amazing app is an account</label><br><br>
-                   <a href="register.html"><button id="landing-3-button">REGISTER NOW</button></a>
-                </center>
-            </div>
-        </div>
-    </body>
+          </div>
+        </footer>
+    </div>
+  </body>
 </html>
