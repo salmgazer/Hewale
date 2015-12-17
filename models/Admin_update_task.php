@@ -6,11 +6,11 @@
 
 include_once("adb.php");
 
-class tasks extends adb
+class task extends adb
 {
 
     /**
-     * Class tasks
+     * Class task
      */
 
     /**
