@@ -36,7 +36,6 @@ function addtask()
 {
     if(isset($_SESSION['admin_id']) && isset($_SESSION['task_id']))
     {
-        /*include('../models/model_task.php');*/
         $tasks = new tasks();
         $task_id = $_REQUEST['nid'];
         $admin_id = $_SESSION['aid'];
@@ -62,7 +61,6 @@ function removetask()
     if(isset($_SESSION['admin_id']))
     {
         $task_id = $_REQUEST['task_id'];
-        /*include('../models/model_task.php');*/
         $tasks = new tasks();
         $row = $tasks->removetask($task_id);
         if(!$row){
@@ -82,7 +80,6 @@ function updatetask()
 {
     if(isset($_SESSION['admin_id']) && isset($_SESSION['task_id']))
     {
-        /*include('../models/model_task.php');*/
         $tasks = new tasks();
         $desc = $_REQUEST['desc'];
         $start = $_REQUEST['start'];
