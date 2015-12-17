@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/myjobs"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="My Jobs" />
+        <item
+            android:id="@+id/myprofile"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/createjob"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Create Job" />
+    </group>
+
+    <item android:title="Commu">
+        <menu>
+                android:id="@+id/signout"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Sign out" />
+        </menu>
+    </item>
+
+</menu>
