@@ -7,103 +7,41 @@
     <!-- Custome css -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Google material icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Font Awesome icons -->
     <link rel="stylesheet" href="fa/css/font-awesome.min.css">
 
     <!-- Google material js -->
 
     <script src="js/jquery-1.11.3.min.js"></script>
-
+    <script src="materialize/js/materialize.min.js"></script>
     <script src="js/script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
-  <body>
+  <body class="teal darken-2">
     <div class="container-fluid">
       <div class="row">
-
-        <!-- Landing page container -->
-        <div class="col s7" id="landing-page">
-            <center><h3 class="cyan-text text-darken-3">Hewale</h3></center>
-            <div class="divider cyan darken-4"></div><br>
-            <!-- Tabs container -->
-            <div class="row">
-                <div class="col s12">
-                    <ul class="tabs">
-                        <li class="tab col s4"><a href="#link"><i class="fa fa-link fa-3x"></i></a></li>
-                        <li class="tab col s4"><a href="#manage"><i class="fa fa-user-md fa-3x"></i></a></li>
-                        <li class="tab col s4"><a href="#report"><i class="fa fa-book fa-3x"></i></a></li>
-                    </ul>
-                </div>
-
-                <!-- Link tabs container -->
-                <div id="link" class="col s12">
-                    <h4>Connecting Health Personels</h4>
-                    <center><p>Connecting community nurses and district health officers to better serve people with health conditions<label> & </label>report on observations.</p></center>
-                </div><!-- end of tabs container -->
-
-                <!-- manage container -->
-                <div id="manage" class="col s12">
-                    <h4>Manage Health Personels</h4>
-                    <center><p>Connecting community nurses and district health officers to better serve people with health conditions<label> & </label>report on observations.</p></center>
-                </div> <!--end of manage container -->
-
-                <!-- manage container -->
-                <div id="report" class="col s12">
-                    <h4>Manage Health Reports</h4>
-                    <center><p>Connecting community nurses and district health officers to better serve people with health conditions<label> & </label>report on observations.</p></center>
-                </div> <!--end of manage container -->
-            </div> <!-- end of tabs container -->
-        </div> <!-- End of landing page container -->
-
-        <!-- Login form container -->
-        <div class="col s5">
-          <!-- Login form -->
-          <form class="col s8 offset-s2" id="login">
-            <center><h5 class="cyan-text text-darken-3">Sign In</h5></center>
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">account_circle</i>
-                <input id="email" type="email" class="validate">
-                <label for="email">Email</label>
-              </div>
+        <form class="col s8 offset-s2 col m4 offset-m4 card white" id="login-form">
+          <div class="row">
+            <center>
+              <h5 class="teal-text">Hewale</h5>
+              <h4 class="teal-text"><i class="fa fa-user-md large"></i></h4>
+            </center>
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
             </div>
-            <div class="row">
-              <div class="input-field col s12">
-                  <i class="material-icons prefix">vpn_key</i>
-                <input id="password" type="password" class="validate">
-                <label for="password">Password</label>
-              </div>
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate">
+              <label for="password">Password</label>
             </div>
-              <button class="btn waves-effect waves-light col s11 offset-s1 cyan darken-3" type="submit"><i class="fa fa-sign-in"></i> Sign in</button>
-          </form> <!-- End of login form -->
-        </div> <!-- End of login form container -->
-
+            <br>
+            <div class="col s12">
+              <a class="waves-effect waves-light btn col s12" id="login-btn">Sign in <i class="fa fa-paper-plane"></i></a>
+            </div>
+          </div>
+        </form>
       </div>
-        <footer class="page-footer cyan darken-4">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Hewale</h5>
-                <p class="grey-text text-lighten-4">Using technology to solve better the health system.</p>
-              </div>
-                <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Contact</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#">Phone: (+233) 054 842 7966</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Email: support@hewale.com</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2015 Hewale
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-          </div>
-        </footer>
     </div>
   </body>
 </html>
