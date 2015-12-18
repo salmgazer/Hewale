@@ -34,10 +34,10 @@ function display_all_nurses() {
 	var objResult = sendRequest(strUrl);
 	if (objResult.result == 1) {
 		nurses = objResult.nurse;
-		nurseTableBody = "";
+		nurseContent = "";
 		for (var i = 0; i < nurses.length; i++) {
-			nurseTableBody += "<tr><td>"+(i+1)+"</td><td>"+nurses[i]['fullname']+"</td><td>"+nurses[i]['location']+"</td><td><button>Try</button></td></tr>"
+			nurseContent += '<div class="col s12 m3"><div class="card"><center><div class="card-image waves-effect waves-block waves-light"><img class="activator" src="img/nurse.png"></div></center><div class="card-content"><span class="card-title activator grey-text text-darken-4">'+nurses[i]["fullname"]+'<i class="fa fa-ellipsis-v right"></i></i></span></div><div class="card-reveal"><span class="card-title grey-text text-darken-4">'+nurses[i]["fullname"]+'<i class="fa fa-times right"></i></span><p>Email:<br> '+nurses[i]["email"]+'<div class="divider"></div> PhoneNumber:<br> '+nurses[i]["phonenumber"]+'</p></div></div></div>';
 		}
-		document.getElementById("nurses").innerHTML = nurseTableBody;
+		document.getElementById("content-container").innerHTML = nurseContent;
 	}
 }

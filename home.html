@@ -30,26 +30,16 @@
       </nav>
 
       <div class="row" id="content-container">
-        <div class="col s12 m3">
-          <div class="card">
-            <center><div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="img/nurse.png">
-            </div></center>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Nurse Name<i class="fa fa-ellipsis-v right"></i></i></span>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Nurse Name<i class="fa fa-times right"></i></span>
-              <p>Email: <br>Location: <br> PhoneNumber: </p>
-            </div>
-          </div>
-        </div>
+        
 
       </div>
     </div>
 
 
     <script>
+    $( document ).ready(function() {
+        display_all_nurses();
+    });
     // Initialize collapse button
     $(".button-collapse").sideNav();
     // Show sideNav

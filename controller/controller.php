@@ -39,12 +39,9 @@ function login(){
 }
 
 function get_all_nurses() {
-  //if(!isset($_SESSION['id'])) {
-    //return;
-  //}
-  include_once('../models/nurse.php');
-  $nurse = new nurse();
-  $row = $nurse->get_all_nurses();
+  include_once('../models/account.php');
+  $account = new account();
+  $row = $account->get_all_nurses();
   if (!$row) {
     echo '{"result":0, "message": "No nurse available."}';
     return;
@@ -52,7 +49,7 @@ function get_all_nurses() {
   echo '{"result":1, "nurse":[';
   while ($row) {
     echo json_encode($row);
-    $row = $nurse->fetch();
+    $row = $account->fetch();
     if ($row) {
       echo ",";
     }
