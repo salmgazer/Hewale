@@ -1,5 +1,5 @@
 $(function () {
-	$("#login").submit(function (e) {
+	$("#login-form").submit(function (e) {
 		e.preventDefault();
 		login();
 	});
@@ -17,9 +17,8 @@ function sendRequest(u){
 
 /** Functions **/
 function login() {
-    email = document.getElementById('email').value;
-    password = document.getElementById('password').value;
-    //alert(email);
+	email = document.getElementById('email').value;
+  password = document.getElementById('password').value;
 	var strUrl = "./controller/controller.php?cmd=1&email="+email+"&password="+password;
 	var objResult = sendRequest(strUrl);
 	if (objResult.result == 1) {
