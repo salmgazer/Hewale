@@ -28,7 +28,7 @@ function login(){
 
         include('../models/account.php');
         $account = new account();
-        $row = $account->login($username, $password);
+        $row = $account->login($email, $password);
         if(!$row){
             echo '{"result":0,"message": "Your details are wrong."}';
             return;
@@ -36,7 +36,6 @@ function login(){
         set_session($row);
         echo '{"result":1,"message": "'.$_SESSION['fullname'].' is logged in"}';
         return;
-
 }
 
 function get_all_nurses() {
@@ -262,8 +261,8 @@ function set_session($row){
     $_SESSION['fullname'] = $row['fullname'];
     $_SESSION['email'] = $row['email'];
     $_SESSION['password'] = $row['password'];
-    $_SESSION['type'] = $row['account_type'];
-    $_SESSION['id'] = $row['account_id'];
+    $_SESSION['type'] = $row['type'];
+    $_SESSION['id'] = $row['id'];
 
 }
 
