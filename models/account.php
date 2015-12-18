@@ -18,5 +18,14 @@ class account extends adb {
         return $this->fetch();
     }
 
+    /**
+     *Function to get all nurse info
+     */
+    function get_all_nurses() {
+      $str_query = "SELECT * from h_accounts WHERE type = 'nurse'";
+      $this->query($str_query);
+      return $this->fetch();
+    }
+
 }
 ?>

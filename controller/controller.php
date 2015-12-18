@@ -13,6 +13,9 @@ switch($cmd) {
     case 2:
         get_all_nurses();
         break;
+    case 3:
+        getAllTask();
+        break;
     default:
         echo '{"result":0, message:"unknown command"}';
         break;
@@ -39,12 +42,9 @@ function login(){
 }
 
 function get_all_nurses() {
-  //if(!isset($_SESSION['id'])) {
-    //return;
-  //}
-  include_once('../models/nurse.php');
-  $nurse = new nurse();
-  $row = $nurse->get_all_nurses();
+  include_once('../models/account.php');
+  $account = new account();
+  $row = $account->get_all_nurses();
   if (!$row) {
     echo '{"result":0, "message": "No nurse available."}';
     return;
@@ -52,12 +52,32 @@ function get_all_nurses() {
   echo '{"result":1, "nurse":[';
   while ($row) {
     echo json_encode($row);
-    $row = $nurse->fetch();
+    $row = $account->fetch();
     if ($row) {
       echo ",";
     }
   }
   echo ']}';
+  return;
+}
+
+function getAllTask () {
+  include('../models/task.php');
+  $task = new task();
+  $row = $task->getAllTask();
+  if (!$row) {
+      echo '{"result":0,"message": "No tasks as at now."}';
+      return;
+  }
+  echo '{"result":1,"tasks":[';
+  while ($row) {
+      echo json_encode($row);
+      $row = $task->fetch();
+      if ($row) {
+          echo ",";
+      }
+  }
+  echo "]}";
   return;
 }
 
