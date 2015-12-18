@@ -13,6 +13,9 @@ switch($cmd) {
     case 2:
         get_all_nurses();
         break;
+    case 3:
+        getAllTask();
+        break;
     default:
         echo '{"result":0, message:"unknown command"}';
         break;
@@ -55,6 +58,26 @@ function get_all_nurses() {
     }
   }
   echo ']}';
+  return;
+}
+
+function getAllTask () {
+  include('../models/task.php');
+  $task = new task();
+  $row = $task->getAllTask();
+  if (!$row) {
+      echo '{"result":0,"message": "No tasks as at now."}';
+      return;
+  }
+  echo '{"result":1,"tasks":[';
+  while ($row) {
+      echo json_encode($row);
+      $row = $task->fetch();
+      if ($row) {
+          echo ",";
+      }
+  }
+  echo "]}";
   return;
 }
 
