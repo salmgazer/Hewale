@@ -6,66 +6,38 @@
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
     <!-- Custome css -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Google material icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Font Awesome icons -->
     <link rel="stylesheet" href="fa/css/font-awesome.min.css">
-    <!-- Datatables -->
-    <!--<link rel="stylesheet" href="datatables/media/css/dataTables.bootstrap.min.css">-->
-
     <!-- Google material js -->
     <script src="js/jquery-1.11.3.min.js"></script>
     <!--<script src="datatables/media/js/dataTables.bootstrap.min.js"></script>-->
     <script src="materialize/js/materialize.min.js"></script>
 
     <script src="js/script.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/s/bs-3.3.5/dt-1.10.10/datatables.min.css"/>
-
-<script type="text/javascript" src="https://cdn.datatables.net/s/bs-3.3.5/dt-1.10.10/datatables.min.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body style="background-color:#fbfbfb;">
-    <nav>
-      <div class="nav-wrapper cyan darken-4">
-        <a href="#" class="brand-logo">Logo</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li></li>
+    <div class="container-fluid" id="main-container">
+      <nav class="teal darken-2">
+        <a class="brand-logo">Hewale</a>
+        <ul id="slide-out" class="side-nav fixed">
+          <center><img src="img/profile.png"></center>
+          <li class="active"><a >Nurses</a></li>
         </ul>
-      </div>
-    </nav><br>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      </nav>
 
-    <div class="row">
-      <div class="col s3 card cyan darken-4">
-        dfdfsfd
-      </div>
+      <div class="row">
 
-      <div class="col s9 white">
-        <table id="table_id" class="display">
-        <thead>
-          <tr>
-              <th>#</th>
-              <th>Fullname</th>
-              <th>Community</th>
-              <th>Actions</th>
-          </tr>
-        </thead>
-
-        <tbody id="nurses">
-
-        </tbody>
-      </table>
       </div>
     </div>
 
-    <script>
-      $(document).ready( function () {
-          $('#table_id').DataTable();
-      } );
 
-      $(document).ready( function () {
-          display_all_nurses();
-      } );
+    <script>
+    // Initialize collapse button
+    $(".button-collapse").sideNav();
+    // Show sideNav
     </script>
   </body>

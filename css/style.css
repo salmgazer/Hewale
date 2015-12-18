@@ -12,3 +12,18 @@
 h5 {
   font-family: Century Gothic;
 }
+
+.brand-logo {
+  margin-left: 20px;
+  font-family: Century Gothic;
+}
+
+#main-container {
+    padding-left: 240px;
+  }
+
+  @media only screen and (max-width : 992px) {
+    header, main, footer {
+      padding-left: 0;
+    }
+  }
