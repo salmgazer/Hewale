@@ -11,46 +11,7 @@ switch($cmd) {
         login();
         break;
     case 2:
-        getAllNurseTasks();
-        break;
-    case 3:
-        getAllNurseSpecTasks();
-        break;
-    case 4:
-        getAllAdminTasks();
-        break;
-    case 5:
-        getAllAdminSpecTasks();
-        break;
-    case 6:
-        find_task();
-        break;
-    case 7:
-        getAllHospitals();
-        break;
-    case 8:
-        addNurse();
-        break;
-    case 9:
-        getAllNurses();
-        break;
-    case 10:
-        addTask();
-        break;
-    case 11:
-        accept_completion();
-        break;
-    case 12:
-        reject_completion();
-        break;
-    case 13:
-        register();
-        break;
-    case 14:
-        logout();
-        break;
-    case 15:
-        removeNurse();
+        get_all_nurses();
         break;
     default:
         echo '{"result":0, message:"unknown command"}';
@@ -59,37 +20,42 @@ switch($cmd) {
 }
 
 /**
- * login for both nurse and admin
+ * Function to login nurse
  */
 function login(){
-    $user_type = $_REQUEST['user_type'];
-    $username = $_REQUEST['username'];
+    $email = $_REQUEST['email'];
     $password = $_REQUEST['password'];
 
-    if($user_type == 'admin'){
-        include('../models/model_admin.php');
-        $admin = new admin();
-        $row = $admin->login($username, $password);
+        include('../models/account.php');
+        $account = new account();
+        $row = $account->login($email, $password);
         if(!$row){
-            echo '{"result":0,"message": "Your details as an admin are wrong."}';
+            echo '{"result":0,"message": "Your details are wrong."}';
             return;
         }
-        set_admin_session($row);
-        echo '{"result":1,"message": "'.$_SESSION['admin_fn'].' is logged in"}';
+        set_session($row);
+        echo '{"result":1,"message": "'.$_SESSION['fullname'].' is logged in"}';
         return;
+}
 
-    }elseif($user_type == 'nurse'){
-        include('../models/model_nurse.php');
-        $nurse = new nurse();
-        $row = $nurse->login($username, $password);
-        if(!$row){
-            echo '{"result":0,"message": "Your details as a nurse are wrong."}';
-            return;
-        }
-        set_nurse_session($row);
-        echo '{"result":1,"message": "'.$_SESSION['nurse_name'].' is logged in"}';
-        return;
+function get_all_nurses() {
+  include_once('../models/account.php');
+  $account = new account();
+  $row = $account->get_all_nurses();
+  if (!$row) {
+    echo '{"result":0, "message": "No nurse available."}';
+    return;
+  }
+  echo '{"result":1, "nurse":[';
+  while ($row) {
+    echo json_encode($row);
+    $row = $account->fetch();
+    if ($row) {
+      echo ",";
     }
+  }
+  echo ']}';
+  return;
 }
 
 /**
@@ -287,25 +253,13 @@ echo '{"result":2,"message": "You need to log in first."}';
         return;
 }
 
-//set nurse sessions
-function set_nurse_session($row){
-    $_SESSION['nurse_username'] = $row['username'];
-    $_SESSION['nurse_pass'] = $row['password'];
-    $_SESSION['nurse_name'] = $row['fullname'];
-    $_SESSION['user_status'] = $row['status'];
-    $_SESSION['nurse_id'] = $row['nurse_id'];
-    $_SESSION['hospital_id'] = $row['hospital_id'];
-}
-
-//set admin sessions
-function set_admin_session($row){
-    $_SESSION['admin_username'] = $row['username'];
-    $_SESSION['admin_pass'] = $row['password'];
-    $_SESSION['admin_fn'] = $row['firstname'];
-    $_SESSION['admin_ln'] = $row['lastname'];
-    $_SESSION['user_status'] = 'admin';
-    $_SESSION['admin_id'] = $row['admin_id'];
-    $_SESSION['hospital_id'] = $row['hospital_id'];
+//set sessions details
+function set_session($row){
+    $_SESSION['fullname'] = $row['fullname'];
+    $_SESSION['email'] = $row['email'];
+    $_SESSION['password'] = $row['password'];
+    $_SESSION['type'] = $row['type'];
+    $_SESSION['id'] = $row['id'];
 
 }
 

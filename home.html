@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hewale | Home</title>
+    <!-- Google materialite css -->
+    <link rel="stylesheet" href="materialize/css/materialize.min.css">
+    <!-- Custome css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="fa/css/font-awesome.min.css">
+    <!-- Google material js -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <!--<script src="datatables/media/js/dataTables.bootstrap.min.js"></script>-->
+    <script src="materialize/js/materialize.min.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body style="background-color:#fbfbfb;">
+    <div class="container-fluid" id="main-container">
+      <nav class="teal darken-2">
+        <a class="brand-logo">Hewale</a>
+        <ul id="slide-out" class="side-nav fixed">
+          <center><img src="img/profile.png"></center>
+          <li class="active"><a><i class="fa fa-users"></i>&nbsp Nurses</a></li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      </nav>
+
+      <div class="row" id="content-container">
+        
+
+      </div>
+    </div>
+
+
+    <script>
+    $( document ).ready(function() {
+        display_all_nurses();
+    });
+    // Initialize collapse button
+    $(".button-collapse").sideNav();
+    // Show sideNav
+    </script>
+  </body>

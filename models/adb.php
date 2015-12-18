@@ -5,7 +5,7 @@
  */
 
 define("DB_HOST", 'localhost');
-define("DB_NAME", 'nurse_task_manager');
+define("DB_NAME", 'hewale');
 define("DB_PORT", 3306);
 define("DB_USER", "root");
 define("DB_PWORD", "");
@@ -62,7 +62,7 @@ class adb {
      */
     function log_error($level, $code, $msg, $mysql_msg = "NONE") {
         $er_code = $this->er_code_prefix + $code;
-        //call to a predefined function 
+        //call to a predefined function
         $log_id = log_msg($level, $er_code, $msg, $mysql_msg);
         //if log id is false return 0;
         if (!$log_id) {
@@ -109,7 +109,7 @@ class adb {
     }
 
     /**
-     * connect to db and run a query 
+     * connect to db and run a query
      */
     function query($str_sql) {
 
@@ -134,7 +134,7 @@ class adb {
     }
 
     /**
-     * returns last auto generated id 
+     * returns last auto generated id
      */
     function get_insert_id() {
         return mysql_insert_id($this->link);
