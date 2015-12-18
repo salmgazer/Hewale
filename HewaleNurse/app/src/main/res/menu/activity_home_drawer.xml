@@ -3,20 +3,12 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/myjobs"
+            android:id="@+id/mytasks"
             android:icon="@drawable/ic_menu_camera"
-            android:title="My Jobs" />
-        <item
-            android:id="@+id/myprofile"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="My Profile" />
-        <item
-            android:id="@+id/createjob"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Create Job" />
+            android:title="My Tasks" />
     </group>
 
-    <item android:title="Commu">
+    <item android:title="">
         <menu>
                 android:id="@+id/signout"
                 android:icon="@drawable/ic_menu_send"

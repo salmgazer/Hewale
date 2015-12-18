@@ -5,9 +5,9 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/single_job"
+        android:id="@+id/single_task"
         android:layout_marginBottom="20dp"
-        android:background="#F4511E">
+        android:background="@color/primary_dark">
 
     <LinearLayout
         android:orientation="vertical"
@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="38dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/summary" />
+            android:id="@+id/description" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -30,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:id="@+id/deadline"
+                android:id="@+id/end_time"
                 android:layout_weight="0.72" />
 
             <TextView
@@ -38,7 +38,8 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:id="@+id/task_id"
-                android:layout_weight="0.12" />
+                android:layout_weight="0.12"
+                android:visibility="invisible" />
         </LinearLayout>
 
     </LinearLayout>

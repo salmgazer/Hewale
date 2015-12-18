@@ -4,12 +4,13 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +31,7 @@ public class TasksFragment extends Fragment {
 
     public static RecyclerView myRecycler;
     public Recycler_View_Adapter mAdapter;
-    public static List<Task> tasks = new ArrayList<>();
+    public List<Task> tasks = new ArrayList<>();
     public static String h_email;
     public static String h_password;
     public static String h_account_id;
@@ -87,7 +88,7 @@ public class TasksFragment extends Fragment {
                 new RecyclerItemClickListener(getActivity(), new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
-                        // do whatever
+
                         processJobRow(position);
                     }
                 })
@@ -96,9 +97,6 @@ public class TasksFragment extends Fragment {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         myRecycler.setLayoutManager(layoutManager);
         tasks = new ArrayList<>();
-        //jobs.add(new Job(2, "Repair my chair", "10/10/2015", 45, "my desc 1"));
-        //jobs.add(new Job(12, "Kill Anthony", "10/12/2015", 50, "my desc 2"));
-        //get jobs here//
         Controller mycontrol = new Controller();
         Intent intent = getActivity().getIntent();
         h_account_id = intent.getExtras().getString("h_account_id");
@@ -107,29 +105,28 @@ public class TasksFragment extends Fragment {
         h_email = intent.getExtras().getString("h_email");
         h_fullname = intent.getExtras().getString("h_fullname");
 
-        String url = "20&artisan_id="+artisan_id+"&community="+community;
-        String cmd = "newjobs";
+        Toast.makeText(getActivity(), h_fullname, Toast.LENGTH_LONG).show();
+
+        String url = "2&nurse_id="+h_account_id;
+        String cmd = "mytasks";
         mycontrol.execute(cmd, url);
 
         final ProgressDialog progressDialog = new ProgressDialog(getActivity(),
                 R.style.AppTheme_Dark_Dialog);
         progressDialog.setIndeterminate(true);
-        progressDialog.setMessage("Loading jobs...");
+        progressDialog.setMessage("Loading your tasks...");
         progressDialog.show();
 
         //get jobs
-        jobs = Controller.jobs;
-        mAdapter = new Recycler_View_Adapter(jobs, getActivity());
+        tasks = mycontrol.tasks;
+        mAdapter = new Recycler_View_Adapter(tasks, getActivity());
         myRecycler.setAdapter(mAdapter);
         new android.os.Handler().postDelayed(
                 new Runnable() {
                     public void run() {
-                        // On complete call either onLoginSuccess or onLoginFailed
-                        //onLoginSuccess();
-                        // onLoginFailed();
                         progressDialog.dismiss();
                     }
-                }, 3000);
+                }, 1000);
         return rootView;
     }
 
@@ -143,25 +140,21 @@ public class TasksFragment extends Fragment {
 
     public void processJobRow(int position){
         Task task = tasks.get(position);
-
-        // System.out.println(job.summary);
-
-        //Intent i = getActivity().getIntent();
-        //Toast.makeText(getActivity(), i.getExtras().getString("username"), Toast.LENGTH_LONG).show();
-        //Toast.makeText(getActivity(), i.getExtras().getString("password"), Toast.LENGTH_LONG).show();
         Intent i = new Intent(getActivity(), TaskDetails.class);
         i.putExtra("admin_id", task.admin_id);
         i.putExtra("description", task.description);
         i.putExtra("end_time", task.end_time);
         i.putExtra("h_task_status", task.h_task_status);
         i.putExtra("nurse_id", task.nurse_id);
-        i.putExtra("username", task.start_time);
-        i.putExtra("password", task.h_task_id);
-        i.putExtra("user_id", task.request_completion);
+        i.putExtra("start_time", task.start_time);
+        i.putExtra("h_task_id", task.h_task_id);
+        i.putExtra("h_email", h_email);
+        i.putExtra("h_password", h_password);
+        i.putExtra("h_account_id", h_account_id);
+        i.putExtra("h_fullname", h_fullname);
+        i.putExtra("request_completion", task.request_completion);
         startActivity(i);
-        //(getActivity()).overridePendingTransition(0, 0);
     }
-
 
 
     @Override
@@ -170,16 +163,6 @@ public class TasksFragment extends Fragment {
         mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p/>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);

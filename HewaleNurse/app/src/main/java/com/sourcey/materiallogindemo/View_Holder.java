@@ -10,17 +10,15 @@ import android.widget.TextView;
 public class View_Holder extends RecyclerView.ViewHolder {
 
     View v;
-    TextView summary;
-    TextView starting_price;
-    TextView date_added;
-    TextView job_id;
+    TextView description;
+    TextView end_time;
+    TextView task_id;
 
     View_Holder(View itemView) {
         super(itemView);
-        v = itemView.findViewById(R.id.single_job);
-        summary = (TextView) itemView.findViewById(R.id.summary);
-        starting_price = (TextView) itemView.findViewById(R.id.starting_price);
-        date_added = (TextView) itemView.findViewById(R.id.date_added);
-        //job_id = (TextView) itemView.findViewById(R.id.job_id);
+        v = itemView.findViewById(R.id.single_task);
+        description = (TextView) itemView.findViewById(R.id.description);
+        end_time = (TextView) itemView.findViewById(R.id.end_time);
+        task_id = (TextView) itemView.findViewById(R.id.task_id);
     }
 }

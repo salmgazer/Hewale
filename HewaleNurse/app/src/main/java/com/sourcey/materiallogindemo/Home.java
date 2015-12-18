@@ -42,14 +42,14 @@ public class Home extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        getSupportActionBar().setTitle("My Jobs");
-        Fragment myfrag = new JobFragment();
+        getSupportActionBar().setTitle("My Tasks");
+        Fragment myfrag = new TasksFragment();
         fragmentManager.beginTransaction().replace(R.id.container, myfrag).commit();
 
         TextView username_area = (TextView)findViewById(R.id.username_area);
 
         Intent intent = this.getIntent();
-        if(intent.hasExtra("username")){
+        if(intent.hasExtra("h_fullname")){
             h_email = intent.getExtras().getString("h_email");
             h_password = intent.getExtras().getString("h_password");
             h_account_id = intent.getExtras().getString("h_account_id");
@@ -60,7 +60,6 @@ public class Home extends AppCompatActivity
         else{
             username_area.setText("no username");
         }
-        //username_area.setText(this.username);
     }
 
     @Override
@@ -82,9 +81,6 @@ public class Home extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -103,16 +99,9 @@ public class Home extends AppCompatActivity
         int id = item.getItemId();
 
 
-        if (id == R.id.myjobs) {
-            // Handle the camera action
-            myfrag = new JobFragment();
+        if (id == R.id.mytasks) {
+            myfrag = new TasksFragment();
             getSupportActionBar().setTitle("My Jobs");
-        } else if (id == R.id.myprofile) {
-            myfrag = new MyProfile();
-            getSupportActionBar().setTitle("My Profile");
-        } else if (id == R.id.createjob) {
-            myfrag = new CreateJob();
-            getSupportActionBar().setTitle("Create Job");
         }
 
          fragmentManager = getFragmentManager();
@@ -123,7 +112,6 @@ public class Home extends AppCompatActivity
         if(myfrag != null){
             fragmentManager.beginTransaction().replace(R.id.container, myfrag).commit();
         }
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

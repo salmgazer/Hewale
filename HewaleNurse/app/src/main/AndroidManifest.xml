@@ -22,15 +22,8 @@
             android:name=".LoginActivity"
             android:theme="@style/AppTheme.Dark" />
         <activity
-            android:name=".SignupActivity"
-            android:theme="@style/AppTheme.Dark" />
-        <activity
             android:name=".Home"
             android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".JobDetails"
-            android:label="@string/title_activity_job_details"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".TaskDetails"

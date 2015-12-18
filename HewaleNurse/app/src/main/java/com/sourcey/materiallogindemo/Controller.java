@@ -5,7 +5,6 @@ import android.os.AsyncTask;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -20,7 +19,8 @@ import java.util.ArrayList;
 
 public class Controller extends AsyncTask<String, Void, String> {
 
-    public static ArrayList<Job> jobs = new ArrayList<>();
+    public ArrayList<Task> tasks = new ArrayList<>();
+    public ArrayList<Comment> comments = new ArrayList<>();
     public static String h_account_id;
     public static String h_fullname;
     public static String h_account_type;
@@ -28,19 +28,18 @@ public class Controller extends AsyncTask<String, Void, String> {
     public static String h_password;
     private String link = "http://cs.ashesi.edu.gh/class2016/william-annoh/HewaleNurse/controller/nurse_controller.php?cmd=";
 
-
-
-
     protected String doInBackground(String... params) {
         String cmd = params[0];
         String  url = link+params[1];
 
         if(cmd.equals("login")){
             breakJsonLogin(sendRequest(url));
-        }else if(cmd.equals("newjobs")){
-            breakJsonJobs(sendRequest(url));
-        }else if(cmd.equals("apply")){
-            return apply(url);
+        }else if(cmd.equals("mytasks")){
+            breakJsonTasks(sendRequest(url));
+        }else if(cmd.equals("comments")){
+            return breakJsonComments(sendRequest(url));
+        }else if(cmd.equals("addComment")){
+            return sendRequest(url);
         }
         return "done";
     }
@@ -70,14 +69,11 @@ public class Controller extends AsyncTask<String, Void, String> {
         finally {
             urlConnection.disconnect();
         }
-        //System.out.println(response);
         return response;
     }
 
     @Override
-    protected void onPostExecute(String result) {
-
-    }
+    protected void onPostExecute(String result) {}
 
     public String breakJsonLogin(String jsonData){
         JSONObject jsonResponse;
@@ -94,8 +90,6 @@ public class Controller extends AsyncTask<String, Void, String> {
             if(jsonMainNode ==  null){
                 return null;
             }
-
-            //System.out.println(jsonMainNode);
             /*********** Process each JSON Node ************/
 
             int lengthJsonArr = jsonMainNode.length();
@@ -113,10 +107,6 @@ public class Controller extends AsyncTask<String, Void, String> {
                 h_password = jsonChildNode.optString("h_password");
             }
 
-            /************ Show Output on screen/activity **********/
-            System.out.println("Pass is "+h_password);
-            System.out.println("Email is "+h_email);
-
         } catch (JSONException e) {
 
             e.printStackTrace();
@@ -124,49 +114,7 @@ public class Controller extends AsyncTask<String, Void, String> {
         return null;
     }
 
-
-
-    public String login(String url) {
-        String result = sendRequest(url);
-        JSONObject json;
-        int res;
-        try {
-            json = new JSONObject(result);
-        }catch (org.json.JSONException j){
-            return "0";
-        }
-        try{
-            res = json.getInt("result");
-        }catch (org.json.JSONException e){
-            return  "0";
-        }
-        return String.valueOf(res);
-    }
-
-    public String apply(String url) {
-        String result = sendRequest(url);
-        JSONObject json;
-        int res;
-        try {
-            json = new JSONObject(result);
-        }catch (org.json.JSONException j){
-            return "0";
-        }
-        try{
-            res = json.getInt("result");
-        }catch (org.json.JSONException e){
-            return  "0";
-        }
-        return String.valueOf(res);
-    }
-
-
-
-
-    public String breakJsonJobs(String jsonData){
-
-        System.out.println(jsonData);
-        System.out.println("We are in");
+    public String breakJsonTasks(String jsonData){
         JSONObject jsonResponse;
 
         try {
@@ -176,17 +124,14 @@ public class Controller extends AsyncTask<String, Void, String> {
 
             /***** Returns the value mapped by name if it exists and is a JSONArray. ***/
             /*******  Returns null otherwise.  *******/
-            JSONArray jsonMainNode = jsonResponse.optJSONArray("jobs");
+            JSONArray jsonMainNode = jsonResponse.optJSONArray("tasks");
 
             if(jsonMainNode ==  null){
                 return null;
             }
-
-            //System.out.println(jsonMainNode);
             /*********** Process each JSON Node ************/
 
             int lengthJsonArr = jsonMainNode.length();
-            //historylist = new OrderHistory.Order[lengthJsonArr];
             for(int i=0; i < lengthJsonArr; i++)
             {
                 //System.out.println("We are in loop");
@@ -194,23 +139,63 @@ public class Controller extends AsyncTask<String, Void, String> {
                 JSONObject jsonChildNode = jsonMainNode.getJSONObject(i);
 
                 /******* Fetch node values **********/
-                String summary = jsonChildNode.optString("summary");
-                Double starting_price   = jsonChildNode.optDouble("starting_price");
-                String date_added = jsonChildNode.optString("date_added");
+                int h_task_id = jsonChildNode.optInt("h_task_id");
+                int nurse_id = jsonChildNode.optInt("nurse_id");
+                int admin_id = jsonChildNode.optInt("admin_id");
                 String description = jsonChildNode.optString("description");
-                int job_id = jsonChildNode.optInt("job_id");
+                String start_time = jsonChildNode.optString("start_time");
+                String end_time = jsonChildNode.optString("end_time");
+                String h_task_status = jsonChildNode.optString("h_task_status");
+                String request_completion = jsonChildNode.optString("request_completion");
 
-                Job job = new Job(job_id, summary, date_added, starting_price, description);
-                jobs.add(job);
-               // System.out.println(jobs.get(i).summary);
-
+                Task task = new Task(h_task_id, nurse_id, admin_id, description, start_time, end_time, h_task_status, request_completion);
+                tasks.add(task);
             }
 
             /************ Show Output on screen/activity **********/
+        } catch (JSONException e) {
 
-            //output.setText(OutputData);
-            //System.out.println(historylist.get(0).order_details);
+            e.printStackTrace();
+        }
+        return "Yes";
+    }
 
+    public String breakJsonComments(String jsonData){
+        JSONObject jsonResponse;
+
+        try {
+
+            /****** Creates a new JSONObject with name/value mappings from the JSON string. ********/
+            jsonResponse = new JSONObject(jsonData);
+
+            /***** Returns the value mapped by name if it exists and is a JSONArray. ***/
+            /*******  Returns null otherwise.  *******/
+            JSONArray jsonMainNode = jsonResponse.optJSONArray("comments");
+
+            if(jsonMainNode ==  null){
+                return null;
+            }
+            /*********** Process each JSON Node ************/
+
+            int lengthJsonArr = jsonMainNode.length();
+            for(int i=0; i < lengthJsonArr; i++)
+            {
+                //System.out.println("We are in loop");
+                /****** Get Object for each JSON node.***********/
+                JSONObject jsonChildNode = jsonMainNode.getJSONObject(i);
+
+                /******* Fetch node values **********/
+                String message = jsonChildNode.optString("message");
+                String sent_by = jsonChildNode.optString("sent_by");
+                if(sent_by.equals("nurse"))
+                    sent_by = "me";
+                String sent_time = jsonChildNode.optString("sent_time");
+
+                Comment comment = new Comment(message, sent_time, sent_by);
+                comments.add(comment);
+            }
+
+            /************ Show Output on screen/activity **********/
         } catch (JSONException e) {
 
             e.printStackTrace();

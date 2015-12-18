@@ -111,4 +111,8 @@
     <string name="signup">No account yet? Create one</string>
     <string name="login">Login</string>
     <string name="title_activity_task_details">TaskDetails</string>
+    <string name="hewale">logo</string>
+    <string name="email">Email</string>
+    <string name="send">Send</string>
+    <string name="enter_comment">Enter comment</string>
 </resources>
