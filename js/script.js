@@ -49,7 +49,7 @@ function loadTasks() {
 			tasks = objResult.tasks;
 			nurseContent = "";
 			for (var i = 0; i < tasks.length; i++) {
-				nurseContent += '<div class="col s12 m4"><div class="card"><div class="card-content black-text"><span class="card-title">'+tasks[i]["summary"]+'</span><p>Description: '+tasks[i]["description"]+'<br>Assigned To: <br> '+tasks[i]["nurse"]+'</p></div></div></div>';
+				nurseContent += '<div class="col s12 m4"><div class="card"><div class="card-content black-text"><span class="card-title">'+tasks[i]["summary"]+'</span><p>Description: '+tasks[i]["description"]+'><div class="divider"></div><br>Assigned To: <br> '+tasks[i]["nurse"]+'</p></div></div></div>';
 			}
 			document.getElementById("content-container").innerHTML = nurseContent;
 		}
