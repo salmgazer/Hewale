@@ -41,3 +41,16 @@ function display_all_nurses() {
 		document.getElementById("content-container").innerHTML = nurseContent;
 	}
 }
+
+function loadTasks() {
+		var strUrl = "./controller/controller.php?cmd=3";
+		var objResult = sendRequest(strUrl);
+		if (objResult.result == 1) {
+			tasks = objResult.tasks;
+			nurseContent = "";
+			for (var i = 0; i < tasks.length; i++) {
+				nurseContent += '<div class="col s12 m4"><div class="card"><div class="card-content black-text"><span class="card-title">'+tasks[i]["summary"]+'</span><p>Description: '+tasks[i]["description"]+'><div class="divider"></div><br>Assigned To: <br> '+tasks[i]["nurse"]+'</p></div></div></div>';
+			}
+			document.getElementById("content-container").innerHTML = nurseContent;
+		}
+}
