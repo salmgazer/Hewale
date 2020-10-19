@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<style>
+body {
+    background-color: #00b33c;
+}
+</style>
+		<script src="validation.js"></script>
+	</head>
+
+	<body>
+				<h2 id="note_head">Hewale - Add A Nurse</h2>
+		<form autocomplete="on" method="GET">
+			
+			<p><b> Nurse Name: </b><br><input type="text" size="30" name="name" id="name"required/></br>
+
+			<p>	
+				<label><b>Account Type:</b></label><br>
+				<select name="account" id="account">
+				<option value="index">Select Account Type</option>
+				<option value="administrator" >Administrator</option>
+				<option value="nurse" >Nurse</option></br>
+				</select>
+				</div> </p>
+
+
+					<p><label><b>Email:</b> </label><br> 
+					<input type="email" name="email" id="email" size="30" required ></br></p>
+			
+
+			<p><b>Password: </b> <br><input type= "password" id="password" size = "30" name="password" required></br></p>
+
+
+					
+				
+
+
+			<input type="button" value="Add A Nurse" onclick="addnurse()" >
+		</form>	
+	</body>
+	
+	</html>
+	
